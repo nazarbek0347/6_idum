@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <title>6-IDUM</title>
+</head>
+<body>
+<div class="container">
+  <nav>
+    <img src="{% static 'images/6logo.png'%}" class="logo">
+<ul>
+    <li><a href="{% url 'homePage' %}">Home</a></li>
+    <li><a href="{% url 'aboutPage' %}">About us</a></li>
+    <li><a href="{% url 'blogPage' %}">Blog</a></li>
+    <li><a href="{% url 'contactPage' %}">Contact</a></li>
+</ul>
+</nav>
+    <section class="contact_section  long_section">
+      <div class="container1">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form_container">
+              <div class="heading_container">
+                <h2>
+                  Contact Us
+                </h2>
+              </div>
+              <form action="">
+                <div>
+                  <input type="text" placeholder="Ismingiz" name="name"/>
+                </div>
+                <div>
+                  <input type="text" placeholder="Telefon raqamingiz" name="number" />
+                </div>
+                <div>
+                  <input type="email" placeholder="Emailingiz" name="email" />
+                </div>
+                <div>
+                  <input type="text" class="message-box" placeholder="Murojaat yoki taklifingiz..." name="message"/>
+                </div>
+                <div class="btn_box">
+                  <button type="submit">
+                    SEND
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="map_container">
+              <div class="map">
+                <div id="googleMap"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>    
+</div>
+<footer class="footer_section">
+  <div class="container1">
+    <p>
+      &copy; <span id="displayYear"></span> All Rights Reserved By
+      <a href="https://instagram.com/m._.nazarbek/">Nazarbek Matyoqubov</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

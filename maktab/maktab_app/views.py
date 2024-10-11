@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import telebot
 from django.shortcuts import redirect
+from .models import Blog
 
 # Create your views here.
 
@@ -31,7 +32,8 @@ def contact(request):
     return render(request, 'contact.html')
 
 def blog(request):
-    return render(request,'blog.html')
+    blogs = Blog.objects.all()
+    return render(request, "blog.html", {"blogs":blogs})
 
 def about(request):
     return render(request,'about.html')
